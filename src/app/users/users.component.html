@@ -1,6 +1,125 @@
 
-<a class="users">Users</a>
-<form class="form-inline">
-  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-</form>
+<app-root></app-root>
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+
+<div class="wrapper">
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="container">
+        <p>Enter Username to search for github profile</p>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search the Git Username" aria-label="Search">
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit"> <i class="fas fa-search"></i>Search</button>
+          </form>
+        </div>
+    </div>
+   
+
+    <div class="row profile">
+      
+      <div class="col-md-12 col-sm-12">
+
+        <div class="container-fluid">
+          <div class="row">
+            
+              <div class="cards">
+                  <div class="card-header">
+                      Username: {{profile.login}}
+
+                      <span class="profile_follows">
+                          <span class="badge badge-primary">
+                            <i class="fas fa-user"></i>Followers
+                            <span class="spacing">{{profile.followers}}</span>
+                        </span>
+                          <span class="badge badge-success">
+                            <i class="fas fa-user"></i>Following
+                            <span class="spacing">{{profile.following}}</span>
+                          </span>
+                          <span class="badge badge-info">
+                            <i class="fas fa-code-branch"></i>Public Gist
+                            <span class="spacing">{{profile.public_gist}}</span>
+                          </span>
+                      </span>
+                     
+    
+                  </div>
+          </div>
+          
+        </div>
+
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-3 col-sm-12">
+                    <img src="{{profile.avatar_url}}" alt="avatar image" class="rounded-circle img-responsive">
+                  </div>
+
+
+                  <div class="col-md-7 offset-md-2 col-sm-12">
+                      <div *ngIf="profile">    
+                          <h4>{{profile.name}}</h4>
+                      </div>
+                      <hr class="style1">
+                      <p>{{profile.bio}}</p>
+                      <table>
+                          <tr *ngIf="profile.created_at">
+                            <td>Created On</td>
+                            <td>{{profile.created_at}}</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>Number of Repos</td>
+                            <td>{{profile.public_repos}}</td>
+                            
+                          </tr>
+                          <tr *ngIf="profile.hireable">
+                            <td>Hireable</td>
+                            <td>{{profile.hireable}}</td>
+                            
+                          </tr>
+                          <tr>
+                            <td *ngIf="profile.company">Company</td>
+                            <td>{{profile.company}}</td>
+                            
+                          </tr>
+                        </table>
+
+                        <p>
+                          <a href="{{profile.html_url}}" target="_blank"class="btn btn-primary btn-sm github_btn">View from Github</a>
+                        </p>
+                     
+
+
+                  </div>
+                </div>
+
+              </div>
+          
+          
+            </div>
+      </div>
+       
+
+
+      
+    </div>
+      
+    
+
+
+
+
+
+
+
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum omnis ullam facere corporis? Nemo voluptatum nihil rem voluptates eum, eveniet cumque dolorem debitis dolor distinctio, dolores molestias aut dolorum quidem?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum omnis ullam facere corporis? Nemo voluptatum nihil rem voluptates eum, eveniet cumque dolorem debitis dolor distinctio, dolores molestias aut dolorum quidem?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum omnis ullam facere corporis? Nemo voluptatum nihil rem voluptates eum, eveniet cumque dolorem debitis dolor distinctio, dolores molestias aut dolorum quidem?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum omnis ullam facere corporis? Nemo voluptatum nihil rem voluptates eum, eveniet cumque dolorem debitis dolor distinctio, dolores molestias aut dolorum quidem?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum omnis ullam facere corporis? Nemo voluptatum nihil rem voluptates eum, eveniet cumque dolorem debitis dolor distinctio, dolores molestias aut dolorum quidem?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum omnis ullam facere corporis? Nemo voluptatum nihil rem voluptates eum, eveniet cumque dolorem debitis dolor distinctio, dolores molestias aut dolorum quidem?</p>
+</div>
+
+  </div>
