@@ -29,19 +29,21 @@ nav.opaque-navbar{
       transition: background-color .5s ease 0s;
       height: 60px;
 }
-
-/* nav.opaque-navbar.opaque {
+.inline{
+    display: inline;
+}
+/* .opaque {
     background-color: black;
     height: 50px;
     color: #fff;
     transition: background-color .5s ease 0s;
-}
-
-.nav-item{
-    text-align: left;
 } */
 
-/* .navbar-nav.links{
+/* .nav-item{
+    text-align: left;
+}
+
+ .navbar-nav.links{
     margin-left: 800px;
 
 } */

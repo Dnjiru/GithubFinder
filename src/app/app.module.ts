@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RoutingModule } from './routing/routing.module'
-
+import { FormsModule } from '@angular/forms'
 // Defining routes
 // const routes:Routes=[
 //   {path:"users",component:UsersComponent},
@@ -27,7 +27,8 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     RoutingModule,
-    HttpModule
+    HttpModule,
+    FormsModule
 
   ],
   providers: [DataService],

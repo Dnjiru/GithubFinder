@@ -9,13 +9,35 @@ import { DataService } from '../services/data.service';
 export class UsersComponent implements OnInit {
 
   profile:any[];
-  avatar_url:any;
+  repos:any[]; 
+  username:string;
+
 
   constructor(private dataService: DataService) {
     this.dataService.getProfile().subscribe(profile => {
       console.log(profile);
       this.profile = profile;
     });
+
+    this.dataService.getRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+    })
+
+   }
+
+
+   searchUser(){
+     this.dataService.updateProfile(this.username);
+     this.dataService.getProfile().subscribe(profile => {
+      console.log(profile);
+      this.profile = profile;
+    });
+
+    this.dataService.getRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+    })
    }
 
   ngOnInit() {

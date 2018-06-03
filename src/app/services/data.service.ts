@@ -23,5 +23,13 @@ export class DataService {
    getProfile(){
      return this.http.get(environment.apiUrl+ this.username + "?access_token=" + environment.accessToken).pipe(map(res => res.json()));
    }
+
+   getRepos(){
+    return this.http.get(environment.apiUrl+ this.username + "/repos?access_token=" + environment.accessToken).pipe(map(res => res.json()));
+  }
+
+  updateProfile(username:string){
+    this.username = username;
+  }
 }
   
