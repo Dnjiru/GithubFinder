@@ -16,13 +16,15 @@ import { ReposComponent } from './repos/repos.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DataService } from './services/data.service';
 import { HttpModule } from '@angular/http';
+import { FontDirective } from './font-directive/font.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     ReposComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    FontDirective
   ],
   imports: [
     BrowserModule,
