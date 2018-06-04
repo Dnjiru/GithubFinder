@@ -17,6 +17,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { DataService } from './services/data.service';
 import { HttpModule } from '@angular/http';
 import { FontDirective } from './font-directive/font.directive';
+import { LastPipe } from './pipe/last.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FontDirective } from './font-directive/font.directive';
     UsersComponent,
     ReposComponent,
     NotFoundComponent,
-    FontDirective
+    FontDirective,
+    LastPipe
   ],
   imports: [
     BrowserModule,
