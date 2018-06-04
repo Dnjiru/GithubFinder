@@ -1,0 +1,28 @@
+div.wrapper{
+    margin-top: 80px;
+}
+
+form.form-inline.ng-untouched.ng-pristine.ng-valid{
+        float: right;
+}
+.searchtext{
+    padding-top:10px;
+    font-size: 14px;
+    color:#8c8b8b;
+}
+span.badge{
+    float: right;
+}
+i{
+    padding: 5px;
+}
+
+.inline{
+    display: inline;
+}
+h5{
+ font-family: Great Vibes;
+ font-size: 30px;
+ 
+
+}

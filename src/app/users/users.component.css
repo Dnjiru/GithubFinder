@@ -1,5 +1,5 @@
 div.wrapper{
-margin-top: 100px;
+margin-top: 80px;
 }
 .inline{
     display: inline;
@@ -111,4 +111,17 @@ div.cards.repocard{
     padding-bottom: 5px;
     margin-bottom: 15px;
 
+}
+.searchtext{
+    padding-top:10px;
+    font-size: 14px;
+    color:#8c8b8b;
+}
+
+div.container-fluid.search{
+    padding-bottom: 0px;
+
+}
+form.form-inline.ng-untouched.ng-pristine.ng-valid{
+       float: right;
 }
