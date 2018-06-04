@@ -1,6 +1,5 @@
 
 <app-root></app-root>
-<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
 
 <div class="wrapper">
 
@@ -8,11 +7,12 @@
 
     <div class="row">
       <div class="container-fluid search">
-        <p>Enter Username to search for github profile</p>
+       
         <form class="form-inline">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search the Git Username" aria-label="Search" [(ngModel)]="username" name = "username" (keyup)= "searchUser()">
+          <input class="form-control mr-sm-2" type="text" placeholder="Git Username" aria-label="Search" [(ngModel)]="username" name = "username" (keyup)= "searchUser()">
           <button class="btn btn-outline-info my-2 my-sm-0" type="submit"> <i class="fas fa-search"></i>Search</button>
         </form>
+        <p class="searchtext">Enter Username to search for github profile</p>
       </div>
     </div>
    
@@ -27,21 +27,21 @@
               <div class="cards">
                   <div class="card-header">
                       <p class = "inline">
-                        Username: {{profile.login}}
+                        Username: {{users.login}}
                       </p>
 
                       <span class="profile_follows">
                         <span class="badge badge-primary">
                         <i class="fas fa-user"></i>Followers
-                        <span class="spacing">{{profile.followers}}</span>
+                        <span class="spacing">{{users.followers}}</span>
                       </span>
                       <span class="badge badge-success">
                         <i class="fas fa-user"></i>Following
-                        <span class="spacing">{{profile.following}}</span>
+                        <span class="spacing">{{users.following}}</span>
                       </span>
                       <span class="badge badge-info">
                         <i class="fas fa-code-branch"></i>Public Gist
-                        <span class="spacing">{{profile.public_gist}}</span>
+                        <span class="spacing">{{users.public_gist}}</span>
                       </span>
                       </span>
                      
@@ -53,41 +53,41 @@
           <div class="card-body">
             <div class="row">
               <div class="col-md-3 col-sm-12">
-                <img src="{{profile.avatar_url}}" alt="avatar image" class="rounded-circle img-responsive">
+                <img src="{{users.avatar_url}}" alt="avatar image" class="rounded-circle img-responsive">
               </div>
 
 
               <div class="col-md-7 offset-md-2 col-sm-12">
-                <div *ngIf="profile">    
-                  <h4>{{profile.name}}</h4>
+                <div *ngIf="users">    
+                  <h4>{{users.name}}</h4>
                 </div>
                   <hr class="style1">
-                  <p>{{profile.bio}}</p>
+                  <p>{{users.bio}}</p>
                   <table>
-                      <tr *ngIf="profile.created_at">
+                      <tr *ngIf="users['created_at']">
                         <td>Created On</td>
-                        <td>{{profile.created_at}}</td>
+                        <td>{{users['created_at']}}</td>
                         
                       </tr>
                       <tr>
                         <td>Number of Repos</td>
-                        <td>{{profile.public_repos}}</td>
+                        <td>{{users.public_repos}}</td>
                         
                       </tr>
-                      <tr *ngIf="profile.hireable">
+                      <tr *ngIf="users['hireable']">
                         <td>Hireable</td>
-                        <td>{{profile.hireable}}</td>
+                        <td>{{users.hireable}}</td>
                         
                       </tr>
                       <tr>
-                        <td *ngIf="profile.company">Company</td>
-                        <td>{{profile.company}}</td>
+                        <td *ngIf="users.company">Company</td>
+                        <td>{{users.company}}</td>
                         
                       </tr>
                     </table>
 
                         <p>
-                          <a href="{{profile.html_url}}" target="_blank"class="btn btn-primary btn-sm github_btn">View profile from Github</a>
+                          <a href="{{users.html_url}}" target="_blank"class="btn btn-primary btn-sm github_btn">View profile from Github</a>
                         </p>
                      
 
