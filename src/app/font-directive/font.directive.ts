@@ -17,8 +17,8 @@ export class FontDirective {
     this.fontChange('Cookie')
   }
   private fontChange(action:string){
-    this.elem.nativeElement.style.fontFamily = 'fantasy'
-    this.elem.nativeElement.style.fontSize = '16px'
-    this.elem.nativeElement.style.color = '#ffee05'
+    this.elem.nativeElement.style.fontFamily = 'Great Vibes'
+    this.elem.nativeElement.style.fontSize = '30px'
+  
   }
 }
