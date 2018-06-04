@@ -31,7 +31,7 @@
                       {{repo['description']}}
                   </p>
                   <p>
-                    {{repo['created_at']}}
+                    {{repo['created_at'] | date}} 
                   </p>
                   <a href="{{repo.html_url}}" target="_blank" class= "btn btn-primary btn-sm" appFont >View on Github</a>
               </div> 
