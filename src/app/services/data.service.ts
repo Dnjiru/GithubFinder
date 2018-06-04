@@ -13,23 +13,33 @@ export class DataService {
 
   
   private username: string;
- 
+  private reponame: string;
 
   constructor(private http:Http) {
     console.log('service is ready');
     this.username = 'SophiaNM';
+    this.reponame = 'Quotes';
    }
 
-   getProfile(){
-     return this.http.get(environment.apiUrl+ this.username + "?access_token=" + environment.accessToken).pipe(map(res => res.json()));
+   getUsers(){
+     return this.http.get(environment.apiUrl+'users/'+ this.username + "?access_token=" + environment.accessToken).pipe(map(res => res.json()));
    }
 
    getRepos(){
-    return this.http.get(environment.apiUrl+ this.username + "/repos?access_token=" + environment.accessToken).pipe(map(res => res.json()));
+    return this.http.get(environment.apiUrl+ 'users/' + this.username + "/repos?order=created&sort=asc?access_token=" + environment.accessToken).pipe(map(res => res.json()));
   }
 
-  updateProfile(username:string){
+  getRepoInfo(){
+    return this.http.get( environment.apiUrl + 'search/repositories?q={' + this.reponame +'}&per_page=10&sort=forks&order=asc?' + environment.accessToken).pipe(map(res => res.json()));
+  }
+
+  updateUsers(username:string){
     this.username = username;
+  }
+
+
+  updateRepos(reponame:string){
+    this.reponame = reponame;
   }
 }
   
