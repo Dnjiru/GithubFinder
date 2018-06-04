@@ -8,15 +8,16 @@ import { DataService } from '../services/data.service';
 })
 export class UsersComponent implements OnInit {
 
-  profile:any[];
+  users:any[];
   repos:any[]; 
+  created_at:any;
   username:string;
 
 
   constructor(private dataService: DataService) {
-    this.dataService.getProfile().subscribe(profile => {
-      console.log(profile);
-      this.profile = profile;
+    this.dataService.getUsers().subscribe(users => {
+      console.log(users);
+      this.users = users;
     });
 
     this.dataService.getRepos().subscribe(repos => {
@@ -28,10 +29,10 @@ export class UsersComponent implements OnInit {
 
 
    searchUser(){
-     this.dataService.updateProfile(this.username);
-     this.dataService.getProfile().subscribe(profile => {
-      console.log(profile);
-      this.profile = profile;
+     this.dataService.updateUsers(this.username);
+     this.dataService.getUsers().subscribe(users => {
+      console.log(users);
+      this.users = users;
     });
 
     this.dataService.getRepos().subscribe(repos => {
