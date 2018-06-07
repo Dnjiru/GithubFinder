@@ -3,7 +3,8 @@ div.wrapper{
 }
 
 form.form-inline.ng-untouched.ng-pristine.ng-valid{
-        float: right;
+        /* float: right; */
+        margin-bottom: 10px;
 }
 .searchtext{
     padding-top:10px;
