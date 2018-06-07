@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers } from '@angular/http';
 // import { HttpClient } from '@angular/common/http';
+import { Users } from '../class/users';
+import { Repos } from '../class/repos';
 import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import {environment} from '../../environments/environment'
@@ -14,11 +16,14 @@ export class DataService {
   
   private username: string;
   private reponame: string;
+  // public users: Users;
 
   constructor(private http:Http) {
     console.log('service is ready');
     this.username = 'SophiaNM';
     this.reponame = 'Quotes';
+
+    // this.users = new Users ("","","","","",0,false,new Date(),0,0);
    }
 
    getUsers(){
