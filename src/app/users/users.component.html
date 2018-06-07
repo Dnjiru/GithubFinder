@@ -58,15 +58,15 @@
 
 
               <div class="col-md-7 offset-md-2 col-sm-12">
-                <div *ngIf="users">    
+                <div *ngIf="users['name']">    
                   <h4>{{users.name}}</h4>
                 </div>
                   <hr class="style1">
                   <p>{{users.bio}}</p>
                   <table>
-                      <tr *ngIf="users['created_at']">
+                      <tr *ngIf="users.created_at">
                         <td>Created On</td>
-                        <td>{{users['created_at'] | date}}</td>
+                        <td>{{users.created_at | date}}</td>
                         
                       </tr>
                       <tr>
