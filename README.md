@@ -30,7 +30,7 @@ The load more function is yet to be active.
 
 
 ## Live Website
-View the complete site [here](https://SophiaNM.github.io/GithubFinder/GitHub/)
+View the complete site [here](https://SophiaNM.github.io/GithubFinder/Github/)
 
 ## Technologies Used
 It is built using Angular JS, HTML, Bootstrap.
