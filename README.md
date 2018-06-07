@@ -1,6 +1,50 @@
-# Github
+# Github Finder
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+This is the second Independent project for Moringa Core, June 1st, 2018.
+The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+
+## Description
+Github Finder is a web application that uses the GitHub API to perform searches on GitHub and display the results to the user.
+
+## Features
+
+1. Uses the Github API to perform searches on Github, and display the results to the users.
+2. Users page searches for user profile strictly using the user name.
+3. Repositories page searches for repositories strictly using the repository name.
+4. Repository page loads 10  searches and one can click `load more` to view more pages.
+
+
+## Behaviour Driven Development
+
+| Behaviour | Input | Output |
+| --------- | ------| ------ |
+|Show github profile|Enter the Username in the search box and cick `search`|Displays name, username, bio, number of repositories, Hireable, date of creating the repo, followers, following and public gists|
+|Search gitub repositories | Navigate to Repos page click on `Repositories` and type the name of repository.|Displays a list of 10 repositories based on the query|
+|Load more search Results	|Click `Load More` button on the Find Repos page |Adds 10 more results in the search results|
+|Redirect to github profile on Github website | Click the `view on github` button of a Github user | Opens the profile on the Github website|
+|Redirect to a specific Github Repository | Click the `view on github` button of a repository on repositories page | Opens the Repository on Github website |
+
+
+## Known Bugs
+The load more function is yet to be active.
+
+
+## Live Website
+View the complete site [here](https://SophiaNM.github.io/GithubFinder/GitHub/)
+
+## Technologies Used
+It is built using Angular JS, HTML, Bootstrap.
+The website uses components, custom directives, custom pipes, routing modules.
+The components in the application are:
+
+
+
+
+## Contributors
+ - Sophia Murage
+
+
+
 
 ## Development server
 
@@ -21,6 +65,34 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## License
+---------
+### MIT License
+
+Copyright (c) [2018] [Sophia Njeri Murage]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+### Contact Information
+njerimurage92@gmail.com | snmurage1@gmail.com
 
 ## Further help
 
