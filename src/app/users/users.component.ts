@@ -10,7 +10,7 @@ import { Users } from '../class/users';
 export class UsersComponent implements OnInit {
 
   users: Users;
-  repos:any[]; 
+  repos:any[];
   created_at:any;
   username:string;
 
@@ -27,6 +27,7 @@ export class UsersComponent implements OnInit {
       this.repos = repos;
     })
 
+    // Repeated subscribing of dataservice to allow for the display of default data 
    }
 
 

@@ -1,3 +1,5 @@
+/* Body Styling */
+
 div.wrapper{
 margin-top: 80px;
 }
@@ -5,12 +7,15 @@ margin-top: 80px;
     display: inline;
 }
 
+
+/* User Profile Styling */
 .profile{
     margin: 20px;
 }
 img{
-    width:280px;
+    width:inherit;
     text-align: centre;
+    margin-top: 50px;
 }
 hr.style1 { 
     border: 1px; 
@@ -21,15 +26,15 @@ hr.style1 {
     background: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
   }
 
-  hr.style2 { 
-    margin-bottom: 60px;
-    border: 1px; 
-    height: 1px; 
-    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
-  }
+hr.style2 { 
+margin-bottom: 60px;
+border: 1px; 
+height: 1px; 
+background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+background: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+background: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+background: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
 h4.style2{
     margin-top: 50px;
     font-family: 'Great Vibes', cursive; 
@@ -69,41 +74,27 @@ span.badge{
 i{
     padding: 5px;
 }
-div.cards{
-    width: 100%;
-}
+
 .github_btn{
     margin: 30px 0px 30px ;
 }
-
-input[type=text] {
-   
-    padding: 10px;
-    width: 250px;
-    height: 40px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    /* background-image: url('searchicon.png'); */
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 10px 20px 10px 20px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-
-input[type=text]:focus {
-    width: 100%;
-}
-
 .search{
     padding: 30px;
     margin: 0 30px 0 20px;
-  
 }
 
+.searchtext{
+    padding-top:10px;
+    font-size: 14px;
+    color:#8c8b8b;
+}
+
+/* End of Users Styling */
+
+/* Repositories section styling */
+div.cards{
+    width: 100%;
+}
 
 div.cards.repocard{
     border: 1px solid #d8d4d4;
@@ -112,16 +103,26 @@ div.cards.repocard{
     margin-bottom: 15px;
 
 }
-.searchtext{
-    padding-top:10px;
-    font-size: 14px;
-    color:#8c8b8b;
-}
 
 div.container-fluid.search{
     padding-bottom: 0px;
 
 }
-form.form-inline.ng-untouched.ng-pristine.ng-valid{
-       float: right;
-}
+/* End of Repositories Styling */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 348px) {
+    div.card-header{
+        height: 180px;
+    }
+
+} 
+
+@media only screen and (max-width: 610px)and (min-width:348px) {
+    div.card-header{
+        height: 110px;
+    }
+
+} 
+
+

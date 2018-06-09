@@ -12,6 +12,7 @@ export class ReposComponent implements OnInit {
 
   repos:Repos;
   reponame:string;
+  show:number;
 
 
   constructor(private dataService: DataService) { 
@@ -27,6 +28,16 @@ export class ReposComponent implements OnInit {
 
   searchRepo(){
     this.dataService.updateRepos(this.reponame);
+    this.dataService.getRepoInfo().subscribe(repos => {
+     console.log(repos);
+     this.repos = repos;
+   });
+   
+  }
+
+  loadMore(){
+    // this.dataService.updateRepos(this.reponame);
+    this.dataService.updateShow(this.show);
     this.dataService.getRepoInfo().subscribe(repos => {
      console.log(repos);
      this.repos = repos;
