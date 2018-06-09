@@ -37,14 +37,8 @@ It is built using Angular JS, HTML, Bootstrap.
 The website uses components, custom directives, custom pipes, routing modules.
 The components in the application are:
 
-
-
-
 ## Contributors
  - Sophia Murage
-
-
-
 
 ## Development server
 
