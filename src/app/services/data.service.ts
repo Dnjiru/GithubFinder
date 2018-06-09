@@ -13,17 +13,19 @@ import {environment} from '../../environments/environment'
 })
 export class DataService {
 
-  
+
   private username: string;
   private reponame: string;
-  // public users: Users;
+  private show:number
+ 
 
   constructor(private http:Http) {
     console.log('service is ready');
     this.username = 'SophiaNM';
     this.reponame = 'Quotes';
+    this.show = 10;
 
-    // this.users = new Users ("","","","","",0,false,new Date(),0,0);
+
    }
 
    getUsers(){
@@ -35,7 +37,7 @@ export class DataService {
   }
 
   getRepoInfo(){
-    return this.http.get( environment.apiUrl + 'search/repositories?q={' + this.reponame +'}&per_page=10&sort=forks&order=asc?' + environment.accessToken).pipe(map(res => res.json()));
+    return this.http.get( environment.apiUrl + 'search/repositories?q={' + this.reponame +'}&per_page='+this.show+'&sort=forks&order=asc?' + environment.accessToken).pipe(map(res => res.json()));
   }
 
   updateUsers(username:string){
@@ -46,5 +48,8 @@ export class DataService {
   updateRepos(reponame:string){
     this.reponame = reponame;
   }
+
+  updateShow(show:number){
+    this.show = this.show+10;
+  }
 }
-  
