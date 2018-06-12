@@ -26,7 +26,7 @@ Github Finder is a web application that uses the GitHub API to perform searches 
 
 
 ## Known Bugs
-There are no known bugs.
+There are no known bugs. Contact me if you find.
 
 
 ## Live Website
